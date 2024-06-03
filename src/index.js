@@ -25,7 +25,7 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 //Routes
-app.post('/', (req, res)=>{
+app.get('/', (req, res)=>{
     res.render('index')
 })
 app.use(ClientesRoutes)
