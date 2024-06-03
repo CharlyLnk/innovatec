@@ -3,6 +3,10 @@ import pool from '../database.js'
 
 const router = Router();
 
+router.get('/add', (req, res) => {
+    res.render('clientes/add');
+})
+
 router.get('/list', async(req, res)=> {
     try{
         const [result] = await pool.query('SELECT * FROM clientes');
